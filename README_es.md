@@ -1,20 +1,3 @@
-# Standard Go Project Layout
-
-Traducciones:
-
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
-
 ## Resumen
 
 Este es un diseño básico para proyectos de aplicaciones de Go. No es un estándar oficial definido por el equipo de desarrollo principal de Go; sin embargo, es un conjunto de patrones de diseño de proyectos históricos y emergentes comunes en el ecosistema Go. Algunos de estos patrones son más populares que otros. También tiene una serie de pequeñas mejoras junto con varios directorios de soporte comunes a cualquier aplicación del mundo real lo suficientemente grande.

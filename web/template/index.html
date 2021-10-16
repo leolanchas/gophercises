@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Choose your own adventure</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">
+            {{.Title}}
+          </h3>
+          {{range $element := .Story}}
+          <p>
+            {{$element}}
+          </p>
+          {{end}}
+          <div class="row">
+            {{range $idx, $x := .Options}}
+            <div class="col-md-6">
+              <a href="/{{$x.Arc}}" class="btn btn-block btn-md btn-primary">
+                {{$x.Text}}
+              </a>
+            </div>
+            {{end}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
