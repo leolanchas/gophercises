@@ -6,16 +6,21 @@ import (
 	"t3/internal/app/json"
 )
 
+func init() {
+	tmpl = template.Must(template.ParseFiles("web/template/index.html"))
+}
+
+var tmpl *template.Template
+
 func Parse(path, storyName string) string {
-	if storyName == "" {
-		storyName = "intro"
+	stories := json.ParseArcs(path)
+	story, ok := stories[storyName]
+
+	if !ok {
+		story = stories["intro"]
 	}
 
-	tmpl := template.Must(template.ParseFiles("web/template/index.html"))
-
 	var tpl bytes.Buffer
-	story := json.ParseArcs(path)[storyName]
-
 	if err := tmpl.Execute(&tpl, story); err != nil {
 		return err.Error()
 	}
